@@ -17,6 +17,7 @@
         <el-menu-item-group>
           <template slot="title">用户管理</template>
           <el-menu-item index="/layout/index">首页</el-menu-item>
+          <el-menu-item index="/layout/userEdit">修改个人信息</el-menu-item>
           <el-menu-item index="/login">登录页</el-menu-item>
           <el-menu-item index="/layout/users">用户管理页面</el-menu-item>
         </el-menu-item-group>
@@ -49,38 +50,45 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
-<style scoped>
-    .layout{
-       
+
+
+
+
+<style scoped lang='scss'>
+.layout {
+}
+.title {
+  text-align: center;
+  font-weight: 400;
+  line-height: 60px;
+  height: 60px;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 20px;
+}
+.ml-200 {
+  margin-left: 200px;
+}
+.side-bar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 80px;
+  width: 200px;
+  border-right: 1px solid #f1f1f1;
+  overflow: hidden;
+  background: #545c64;
+
+  /deep/ {
+    .el-menu {
+      border-right: none;
     }
-    .title{
-           text-align: center;
-           font-weight: 400;
-           line-height: 60px;
-           height: 60px;
-           border-bottom: 1px solid #f1f1f1;
-           font-size: 20px;
-    } 
-    .ml-200{
-       margin-left: 200px; 
-    }
-    .side-bar{
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0; 
-        padding-top: 80px;
-        width: 200px;
-        border-right: 1px solid #f1f1f1;
-        overflow: hidden;
-        background: #545c64;
-    }
-    .main-content{
-        padding: 15px;
-    }
+  }
+}
+.main-content {
+  padding: 15px;
+}
 </style>

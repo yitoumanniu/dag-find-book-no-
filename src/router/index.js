@@ -7,7 +7,9 @@ Vue.use(Router)
    login: ()=> import('@/views/login/login.vue'),
    layout:()=> import('@/views/layout/layout.vue'),
    index: ()=> import('@/views/index/index.vue'),
-   users: ()=> import('@/views/users/index.vue')
+   users: ()=> import('@/views/users/index.vue'),
+   text:  ()=> import('@/views/text/index.vue'),
+   userEdit:()=> import('@/views/userEdit/userEdit.vue')
 
 
  }
@@ -42,6 +44,17 @@ export default new Router({
             title:'用户管理'
           },
           component:components.users,
+        },
+        {
+          path: 'text',
+          component:components.text
+        },
+        {
+          path:'userEdit',
+          meta:{
+            title:'修改个人信息'
+          },
+          component:components.userEdit
         }
     ]
     }
